@@ -1,9 +1,5 @@
 # Learn OpenUSD: Stages, Prims and Attributes Notes
 
----
-
----
-
 # 1. Introduction to OpenUSD
 
 ## 1.1. Overview of OpenUSD
@@ -412,6 +408,8 @@ USD provides **two main ways** to structure objects:
 1. **Scopes** – Used for **logical grouping** (without transformations).
 2. **Xforms** – Used for **spatial transformations** (position, rotation, scale).
 
+---
+
 ## **5.2. Scopes: Logical Grouping of Objects**
 
 A **Scope** is used when you need to **organize objects** but **don’t need to move them together**.
@@ -451,6 +449,7 @@ print("Is this a Scope?", prim.IsA(UsdGeom.Scope))  # Output: True
 # Save the stage
 stage.GetRootLayer().Save()
 ```
+---
 
 ## **5.3. Xform: Applying Transformations**
 
@@ -495,6 +494,8 @@ xform.AddXformOp(UsdGeom.XformOp.TypeTranslate).Set(Gf.Vec3d(5, 0, 0))
 # Save the stage
 stage.GetRootLayer().Save()
 ```
+
+---
 
 ## **5.4. Scopes vs. Xforms**
 
@@ -806,7 +807,7 @@ Instead of storing data **directly**, relationships **act as links**, referencin
     # Remove the relationship
     relationship.ClearTargets()
     ```
-    
+---
 
 ## **7.3. Comparison Table: Attributes vs. Relationships**
 
